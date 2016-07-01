@@ -1,4 +1,4 @@
-# generator-baus-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-baus-component [![NPM version][npm-image]][npm-url] 
 > Builds out default components for you
 
 ## Installation
@@ -15,10 +15,6 @@ Then generate your new project:
 ```bash
 yo baus-component
 ```
-## License
-
-MIT © [Benton](www.bauscode.com)
-
 
 [npm-image]: https://badge.fury.io/js/generator-baus-component.svg
 [npm-url]: https://npmjs.org/package/generator-baus-component
