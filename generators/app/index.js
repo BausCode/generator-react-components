@@ -22,7 +22,14 @@ module.exports = yeoman.Base.extend({
           name: 'componentIsStatefull',
           message: 'should this extend the class component?',
           default: false
+      },
+      {
+          type: 'confirm',
+          name: 'componentHasStyle',
+          message: 'Do you need a stylesheet?',
+          default: false
       }
+
     ];
 
     return this.prompt(prompts).then(function (props) {
@@ -44,7 +51,10 @@ module.exports = yeoman.Base.extend({
           name: this.props.componentname 
       };
    
-      this.template("_style.css", this.props.componentname + "/style.scss", context);
+      if (this.props.componentHasStyle) {
+        this.template("_style.css", this.props.componentname + "/style.scss", context);
+      }
+
       this.template("_index.js", this.props.componentname +"/index.js", context);    
 
       if (this.props.componentIsStatefull) {
