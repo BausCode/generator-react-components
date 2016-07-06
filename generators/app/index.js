@@ -2,6 +2,7 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var mkdirp = require('mkdirp');
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
@@ -41,8 +42,12 @@ module.exports = yeoman.Base.extend({
 
  
   scaffoldFolders: function(){
+      var self = this;
       console.log("SCAFFOLDING", this.props.componentname);
-      this.mkdir(this.props.componentname);
+      mkdirp(self.props.componentname, function (err) {
+         if (err) console.error(err)
+         else console.log('Made directory!', self.props.componentname)
+      });
   },
 
   copyMainFiles: function(){
