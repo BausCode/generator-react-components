@@ -46,7 +46,6 @@
   },
   "repository": "https://github.com/rochestb/.dotfiles.git",
   "scripts": {
-    "prepublish": "gulp prepublish",
     "test": "gulp"
   },
   "license": "MIT"
