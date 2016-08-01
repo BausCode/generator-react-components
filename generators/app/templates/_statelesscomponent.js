@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 if (process.env.BROWSER) {
   require('./style.scss');
 }
 
-let <%= name %> = function () {
+function <%= name %> (props) {
   return (
     <h2>
       <%= name %> 
     </h2>
   );
+};
+
+<%= name %>.propTypes = {
 };
 
 export default <%= name %>;
