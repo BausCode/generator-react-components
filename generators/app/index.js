@@ -2,6 +2,7 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var mkdirp = require('mkdirp');
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
@@ -22,7 +23,14 @@ module.exports = yeoman.Base.extend({
           name: 'componentIsStatefull',
           message: 'should this extend the class component?',
           default: false
+      },
+      {
+          type: 'confirm',
+          name: 'componentHasStyle',
+          message: 'Do you need a stylesheet?',
+          default: false
       }
+
     ];
 
     return this.prompt(prompts).then(function (props) {
@@ -34,8 +42,12 @@ module.exports = yeoman.Base.extend({
 
  
   scaffoldFolders: function(){
+      var self = this;
       console.log("SCAFFOLDING", this.props.componentname);
-      this.mkdir(this.props.componentname);
+      mkdirp(self.props.componentname, function (err) {
+         if (err) console.error(err)
+         else console.log('Made directory!', self.props.componentname)
+      });
   },
 
   copyMainFiles: function(){
@@ -44,7 +56,10 @@ module.exports = yeoman.Base.extend({
           name: this.props.componentname 
       };
    
-      this.template("_style.css", this.props.componentname + "/style.scss", context);
+      if (this.props.componentHasStyle) {
+        this.template("_style.css", this.props.componentname + "/style.scss", context);
+      }
+
       this.template("_index.js", this.props.componentname +"/index.js", context);    
 
       if (this.props.componentIsStatefull) {

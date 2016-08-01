@@ -1,6 +1,7 @@
 # generator-baus-component [![NPM version][npm-image]][npm-url] 
-> Builds out default components for you
+> Builds a single React component to reduce writing code.
 
+![Screnshot](./generator_screenshot.png)
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-baus-component using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
