@@ -44,7 +44,7 @@
       "mocha": true
     }
   },
-  "repository": "https://github.com/rochestb/.dotfiles.git",
+  "repository": "https://github.com/BausCode/generator-react-components",
   "scripts": {
     "test": "gulp"
   },
