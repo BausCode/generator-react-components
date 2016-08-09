@@ -1,7 +1,4 @@
-// @import '../../stylesheets/variables.scss';
+/* @import '../../stylesheets/variables.scss';
+@import '../../stylesheets/defaults/grid.scss'; */
 
 /******************************** <%= name %> */
-
-.<%= name %> {
-  //&__element {}
-}
