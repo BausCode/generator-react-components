@@ -1,6 +1,6 @@
 {
   "name": "generator-baus-component",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "Builds out default components for you",
   "homepage": "",
   "author": {
@@ -44,7 +44,7 @@
       "mocha": true
     }
   },
-  "repository": "https://github.com/rochestb/.dotfiles.git",
+  "repository": "https://github.com/BausCode/generator-react-components",
   "scripts": {
     "test": "gulp"
   },
