@@ -17,6 +17,7 @@ class <%= name %> extends Component {
 }
 
 <%= name %>.propTypes = {
+  name: PropTypes.string
 };
 
 export default <%= name %>;

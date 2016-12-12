@@ -13,6 +13,7 @@ function <%= name %> (props) {
 };
 
 <%= name %>.propTypes = {
+  name: PropTypes.string
 };
 
 export default <%= name %>;
