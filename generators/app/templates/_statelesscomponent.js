@@ -10,7 +10,7 @@ function <%= name %> (props) {
       <%= name %> 
     </h2>
   );
-};
+}
 
 <%= name %>.propTypes = {
   name: PropTypes.string
